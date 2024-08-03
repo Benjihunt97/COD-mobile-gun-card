@@ -1,0 +1,148 @@
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  overflow: hidden;
+  
+  background: linear-gradient(
+    to bottom right,
+    #f2f2f2,
+    #171717
+  );
+}
+
+
+/* card */
+.card {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  background: linear-gradient(
+    to top,
+    #181818,
+    transparent
+  ), url("././img/main_bg.jpg") no-repeat center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  
+  border: 5px solid #fff;
+  border-radius: .5rem;
+  box-shadow: 4px 4px 12px rgba(50, 50, 50, 0.5);
+}
+
+/* logo */
+.logo {
+  display: grid;
+  place-items: center;
+  
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 75px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  background: #fff;
+  box-shadow: 4px 4px 12px rgba(50, 50, 50, 0.5);
+}
+
+.logo img {
+  width: 80%;
+}
+
+.logo::before,
+.logo::after {
+  position: absolute;
+  content: "";
+  z-index: 5;
+  top: 41%;
+  
+  width: 20px;
+  aspect-ratio: 1;
+  border-top-right-radius: 50%;
+  border: 5px solid transparent;
+  border-right-color: #fff;
+  border-right-width: 5px;
+  border-top-color: #fff;
+  border-top-width: 5px;
+  
+}
+
+.logo::before {
+  left: -2.5rem;
+}
+
+.logo::after {
+  right: -2.5rem;
+  transform: rotateY(180deg);
+}
+
+.bottom-curve {
+  position: absolute;
+  left: -1.125rem;
+  bottom: -1rem;
+  width: 100px;
+  height: 100px;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  border-radius: 50%;
+}
+
+/* character */
+.character {
+  position: absolute;
+  bottom: -1rem;
+  left: -1rem;
+  
+  width: 200px;
+  
+  transform: rotateY(180deg);
+}
+
+/* m13 gun*/
+.m13 {
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  width: 275px;
+  filter: drop-shadow(0 0 15px #A6A8B7);
+}
+
+/* details */
+.details {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  
+  
+  font-size: 0.875rem;
+  font-weight: 550;
+}
+
+ul {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  color: #fff;
+}
+
+ul li {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+ul .stat {
+  padding: .5rem .75rem;
+  border-radius: 0 100vw 100vw 0;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+ul .stat-name {
+  padding: .5rem .75rem;
+  border-radius: 100vw 0 0 100vw;
+  border: 2px solid gold;
+  font-size: 0.675rem;
+}
